@@ -36,4 +36,9 @@ module.exports = function (System) {
     console.log('systemData:', systemData)
     return systemData
   }
+
+  System.getPublicQRCodePath = (email) => {
+    const QRCode = System.app.models.qr_code
+    return QRCode.getPublicPathByEmail(email)
+  }
 }

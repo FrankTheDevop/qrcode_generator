@@ -80,6 +80,24 @@
           "verb": "get"
         }
       ]
+    },
+    "getPublicQRCodePath": {
+      "accepts": [{
+        "arg": "email",
+        "type": "string"
+      }],
+      "returns": [{
+        "arg": "url",
+        "type": "string",
+        "root": false
+      }],
+      "description": "",
+      "http": [
+        {
+          "path": "/getPublicQRCodePath",
+          "verb": "get"
+        }
+      ]
     }
   }
 }

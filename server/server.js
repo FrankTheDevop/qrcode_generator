@@ -2,8 +2,10 @@
 
 let loopback = require('loopback')
 let boot = require('loopback-boot')
+var path = require('path');
 
 let app = module.exports = loopback()
+app.set('view engine', 'ejs'); // LoopBack comes with EJS out-of-box
 
 app.start = function () {
   // start the web server
