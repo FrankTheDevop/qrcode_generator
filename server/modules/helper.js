@@ -18,16 +18,12 @@ module.exports.checkPayload = (payload) => {
 module.exports.doWeNeedToGetTheEntry = (entry) => (entry === null || entry === undefined)
 
 module.exports.fileAvailable = (url) => {
-  return Promise
-    .resolve()
-    .then(() => {
-      logger.debug(`fileExists: ${fs.existsSync(path)}`)
-      if (fs.existsSync(path)) {
-        return Promise.resolve(true)
-      }
+  logger.debug(`fileExists: ${fs.existsSync(url)}`)
+  if (fs.existsSync(url)) {
+    return Promise.resolve(true)
+  }
 
-      return Promise.resolve(false)
-    })
+  return Promise.resolve(false)
 }
 
 module.exports.validValue = (value) => {

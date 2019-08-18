@@ -10,14 +10,16 @@ const helper = require('../../server/modules/helper')
 
 module.exports = function (System) {
 
-  System.generateQrCode = (email, token) => {
-    const qrPng = qr.imageSync(`${email}|${token}`)
-    const fileName = path.join(__dirname, `../../public/${email}|${token}.png`)
-    fs.writeFileSync(fileName, qrPng, (err => {
-      if (err) {
-        console.error(err)
-      }
-    }))
-    return Promise.resolve(fileName)
+  System.generateQrCode = async (email, token) => {
+    const QRCode = System.app.models.qr_code
+
+    const exists = await QRCode.existsAlready(email, token)
+
+    console.log('FileExists2:', exists)
+    if (!exists) {
+      await QRCode.generate(email, token)
+    }
+
+    return QRCode.generatePublicPath(email, token)
   }
 }
