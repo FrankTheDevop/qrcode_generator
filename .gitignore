@@ -17,4 +17,7 @@
 coverage
 node_modules
 npm-debug.log
+config/local*
 alternative-tmp
+.nyc_output
+client/*

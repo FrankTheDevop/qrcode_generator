@@ -39,5 +39,9 @@
   },
   "System": {
     "dataSource": "internal"
+  },
+  "qr_code": {
+    "dataSource": "db",
+    "public": true
   }
 }

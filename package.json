@@ -1,9 +1,9 @@
 {
-  "name": "lbseed",
-  "version": "1.0.0",
+  "name": "qrcode_generator",
+  "version": "0.0.1",
   "main": "server/server.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=12"
   },
   "scripts": {
     "lint": "eslint .",
@@ -22,11 +22,10 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^4.0.0",
     "loopback-component-mq": "^2.2.5",
-    "loopback-connector-mongodb": "^1.18.1",
     "loopback-connector-mysql": "^5.2.0",
     "loopback-connector-rest": "^2.1.0",
-    "loopback-ds-timestamp-mixin": "^3.4.1",
     "nps": "^5.7.1",
+    "qr-image": "^3.2.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0",
     "uuid": "^3.1.0"
@@ -35,7 +34,7 @@
     "chai": "^4.1.2",
     "chai-json": "^1.0.0",
     "dirty-chai": "^2.0.1",
-    "eslint": "^3.17.1",
+    "eslint": "^6.1.0",
     "eslint-config-loopback": "^8.0.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",
@@ -88,5 +87,5 @@
     }
   },
   "license": "UNLICENSED",
-  "description": "My personal seed project for loopback to reduce setup times."
+  "description": "QR Code Generator Microservice"
 }
