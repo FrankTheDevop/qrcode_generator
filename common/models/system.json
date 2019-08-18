@@ -35,5 +35,51 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {}
+  "methods": {
+    "generateQrCode": {
+    "accepts": [
+      {
+        "arg": "email",
+        "type": "string",
+        "required": true
+      },
+      {
+        "arg": "token",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "returns": [
+      {
+        "arg": "code",
+        "type": "buffer",
+        "root": false,
+        "description": ""
+      }
+    ],
+    "description": "",
+    "http": {
+      "verb": "get"
+    }
+  },
+    "getQRCode": {
+      "accepts": [{
+        "arg": "email",
+        "type": "string"
+      }],
+      "returns": [{
+        "arg": "code",
+        "type": "buffer",
+        "root": false,
+        "description": ""
+      }],
+      "description": "",
+      "http": [
+        {
+          "path": "/getQrCode",
+          "verb": "get"
+        }
+      ]
+    }
+  }
 }
