@@ -1,5 +1,5 @@
 {
-  "extends": "standard",
+  "extends": "loopback",
   "rules": {
     "comma-dangle": [
       "error",
@@ -10,6 +10,18 @@
       "after"
     ],
     "padded-blocks": "off",
-    "no-var": "error"
+    "no-var": "error",
+    "semi": [
+      "error",
+      "never"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "space-before-function-paren": [
+      "error",
+      "always"
+    ]
   }
 }

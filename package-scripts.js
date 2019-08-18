@@ -54,8 +54,8 @@ const dockerPath = `${dockerOrg}/instagram-${dockerImage}:${tag}`
 const docker = {
   build: `docker build --no-cache -t ${dockerPath} .`,
   push: `docker push ${dockerPath}`,
-  run: `docker-compose -f docker-compose.yml up`,
+  run: 'docker-compose -f docker-compose.yml up',
 }
 
 // Export the Scripts object
-module.exports = {scripts: { dev, lint, test, coverage, lbSDK, start, docker }}
+module.exports = { scripts: { dev, lint, test, coverage, lbSDK, start, docker } }
