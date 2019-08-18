@@ -18,7 +18,6 @@ module.exports.checkPayload = (payload) => {
 module.exports.doWeNeedToGetTheEntry = (entry) => (entry === null || entry === undefined)
 
 module.exports.fileAvailable = (url) => {
-  logger.debug(`fileExists: ${fs.existsSync(url)}`)
   if (fs.existsSync(url)) {
     return Promise.resolve(true)
   }

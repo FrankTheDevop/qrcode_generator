@@ -15,7 +15,6 @@ module.exports = function (System) {
 
     const exists = await QRCode.existsAlready(email, token)
 
-    console.log('FileExists2:', exists)
     if (!exists) {
       await QRCode.generate(email, token)
     }
